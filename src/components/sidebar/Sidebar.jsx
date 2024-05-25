@@ -3,6 +3,7 @@ import Logo from '../../assets/logo.svg';
 
 const Sidebar = () => {
   return (
+    <>
     <aside className='aside'>
       <a href="#home" className="nav__logo"> 
       <img src={Logo} alt="logo" />
@@ -36,15 +37,16 @@ const Sidebar = () => {
               </a>
             </li>
             
-            <li className="nav__item">
-              <a href="#contact" className="nav__link">
-                <i className="icon-phone"></i>
-              </a>
-            </li>
             
             <li className="nav__item">
               <a href="#blog" className="nav__link">
                 <i className="icon-pencil"></i>
+              </a>
+            </li>
+            
+            <li className="nav__item">
+              <a href="#contact" className="nav__link">
+                <i className="icon-phone"></i>
               </a>
             </li>
 
@@ -57,6 +59,10 @@ const Sidebar = () => {
       </div>
     </aside>
 
+    <div className="nav__taggle">
+      <i className="icon-menu"></i>
+    </div>
+    </>
   )
 }
 
