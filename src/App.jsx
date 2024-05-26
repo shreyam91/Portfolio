@@ -7,6 +7,7 @@ import Work from './components/work/Work';
 import Resume from './components/resume/Resume';
 import Contact from './components/contact/Contact';
 import Blog  from './components/blog/Blog';
+import Skills from './components/skills/Skills';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Resume/>
       <Blog/>
       <Contact/>
+      <Skills/>
     </main>
     </>
   )
