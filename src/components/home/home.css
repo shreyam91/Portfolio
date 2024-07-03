@@ -27,7 +27,7 @@
 
 .home__subtitle,
 .home__job span{
-    font-size:var(--small-font-size);
+    font-size:var(--h5-font-size);
     color:var(--title-color);
 }
 
@@ -139,6 +139,11 @@
 
 .home__data-two {
     bottom:5%;
+    right:6%;
+}
+
+.home__data-three {
+    top:45%;
     right:6%;
 }
 

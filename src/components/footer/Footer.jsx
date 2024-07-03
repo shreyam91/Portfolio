@@ -1,6 +1,6 @@
 import './footer.css';
 import { SiLeetcode,SiInstagram,SiFacebook  } from "react-icons/si";
-
+import { FaGithub,FaLinkedinIn,FaDev } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,14 +8,14 @@ const Footer = () => {
         <div className="footer__container container grid">
 
             <div className="footer__socials">
-                <a href="" className="footer__socials-link">
-                <SiLeetcode /> 
+                <a href="https://www.linkedin.com/in/shreyam-kanaujiya/" className="footer__socials-link" target='_blank'>
+                <FaLinkedinIn /> 
                 </a>
-                <a href="" className="footer__socials-link">
-                <SiInstagram /> 
+                <a href="https://app.daily.dev/shrey_" className="footer__socials-link" target='_blank'>
+                <FaDev /> 
                 </a>
-                <a href="" className="footer__socials-link">
-                <SiFacebook /> 
+                <a href="https://github.com/shreyam91" className="footer__socials-link" target='_blank'>
+                <FaGithub /> 
                 </a>
             </div>
 

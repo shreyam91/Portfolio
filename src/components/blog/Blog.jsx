@@ -13,7 +13,7 @@ const Blog = () => {
             My <span> Articles </span>
         </p>
 
-        <div className="blog__container container grid">
+        <div className="blog__container-grid container">
             <div className="blog__item card card-two">
                 <span className='blog__data text-cs'> MAY 21, 2024</span>
                 <h3 className="blog__title"> The Main Thing for the designer</h3>

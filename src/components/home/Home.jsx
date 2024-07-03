@@ -31,7 +31,7 @@ const Home = () => {
         <a href="https://github.com/shreyam91" target='_blank'>
             <p className="home__data home__data-one">
 
-                <span className="text-sm text-cs">Github </span>
+                <span className="text-sm text-cs">Github</span>
                 <span className="text-lg"><FaGithub /></span>
             </p> 
             </a>
@@ -43,17 +43,25 @@ const Home = () => {
                 <span className="text-lg"><FaLinkedinIn /></span>
             </p>
             </a>
+            
+            <a href="https://leetcode.com/u/Shrey91leet/" target='_blank'>
+            <p className="home__data home__data-three">
 
-            <img src={shapeOne} alt="" className="shape shape__1" />
-            <img src={shapeTwo} alt="" className="shape shape__2" />
-            <img src={shapeTwo} alt="" className="shape shape__3" />
+                <span className="text-sm text-cs">LeetCode</span>
+                <span className="text-lg"><SiLeetcode /></span>
+            </p>
+            </a>
+
+            {/* <img src={shapeOne} alt="" className="shape shape__1" /> */}
+            {/* <img src={shapeTwo} alt="" className="shape shape__2" /> */}
+            {/* <img src={shapeTwo} alt="" className="shape shape__3" /> */}
         </div>
 
         <p className="home__text">
         A highly skilled web developer with expertise in front-end and back-end development. Proficient in HTML, CSS, JavaScript,React, and responsive design principles. Experienced in creating and maintaining websites to meet client specifications and enhance user experience.
         </p>
 
-        <div className="home__socials">
+        {/* <div className="home__socials">
             <a href="https://leetcode.com/u/Shrey91leet/" target='_blank' className="home__socials-link">
             <SiLeetcode /> 
             </a>
@@ -63,7 +71,7 @@ const Home = () => {
             <a href="https://www.linkedin.com/in/shreyam-kanaujiya/" target='_blank' className="home__socials-link">
             <FaLinkedinIn /> 
             </a>
-        </div>
+        </div> */}
 
         <div className="home__btns">
             <a download='' href={resume} className="btn text-cs">Download CV</a>
