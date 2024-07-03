@@ -1,44 +1,117 @@
-import './contact.css'
+import { useState } from 'react'
+import axios from 'axios';
+import './contact.css';
+import { FaRegAddressBook, FaRegEnvelopeOpen, FaRegUser, FaRegMap } from "react-icons/fa";
+
 
 const Contact = () => {
+
+    const [form, setForm] = useState({name:'', email:'', subject:'', message:''})
+
+    const handleChange =(e) =>{
+        const name = e.target.name;
+        const value = e.target.value;
+        setForm({...form,[name]: value});
+    }
+
+    const handleSubmit =(e) =>{
+        e.preventDefault();
+
+        axios.post('https://sheet.best/api/sheets/57168231-3649-4346-b3c6-e7b5d56c9a90', form).then((response) =>{
+            console.log(response);
+            // clearing the form fields
+            setForm({name:'', email:'', subject:'', message:''});
+        })
+    }
+
   return (
-<section className="contact container section" id="contact">
-  <h2 className="section__title">Get In Touch</h2>
+    <section className="contact section" id="contact">
+        <h2 className="section__title text-cs"> Connect With Me</h2>
+        <p className="section__subtitle">
+            Let's <span> Talk About Ideas  </span>
+        </p>
 
-  <div className="contact__container grid">
+        <div className="contact__container container grid">
+                <div className="contact__content">
+                    <div className="contact__card">
+                        <span className="contact__card-icon">
+                            <FaRegMap/>
+                        </span>
 
-    <div className="contact__info">
-      <h3 className="contact__title"> Let's talk about everythinh!</h3>
-      <p className="contact__details"> Don't want to fill forms? Just send me an email..</p>
-    </div>
+                        <h3 className="contact__card-title"> Address</h3>
+                        <p className="contact__card-data"> Kanpur, Uttar Pradesh</p>
+                    </div>
+                    
+                    {/* <div className="contact__card">
+                        <span className="contact__card-icon">
+                            <FaRegMap/>
+                        </span>
 
-    <form action="" className='contact__form'>
+                        <h3 className="contact__card-title"></h3>
+                        <p className="contact__card-data"></p>
+                    </div> */}
+                    
+                    <div className="contact__card">
+                        <span className="contact__card-icon">
+                            <FaRegUser/>
+                        </span>
 
-      <div className="contact__form-group">
-        <div className="contact__form-div">
-          <input type="text" className="contact__form-input" placeholder='Your Name'/>
-        </div>
-      
-        <div className="contact__form-div">
-          <input type="email" className="contact__form-input" placeholder='Your Email'/>
-        </div>
-      
-      </div>
+                        <h3 className="contact__card-title"> Freelance</h3>
+                        <p className="contact__card-data"> Available Right Now</p>
+                    </div>
+                    
+                    <div className="contact__card">
+                        <span className="contact__card-icon">
+                            <FaRegEnvelopeOpen/>
+                        </span>
 
-        <div className="contact__form-div">
-          <input type="text" className="contact__form-input" placeholder='Enter Subject here'/>
-        </div>
-        
-        <div className="contact__form-div contact__form-area">
-          <textarea name="" cols="30" row="10" className="contact__form-input" id="" placeholder='Enter your query or message!'></textarea>
-        </div>
+                        <h3 className="contact__card-title"> Email </h3> 
+                        <p className="contact__card-data"> email@email.com</p>
+                    </div>
+                    
+                    <div className="contact__card">
+                        <span className="contact__card-icon">
+                            <FaRegAddressBook/>
+                        </span>
 
-    <button className='btn'>Send Message</button>
+                        <h3 className="contact__card-title">Phone</h3>
+                        <p className="contact__card-data"> +91 - 9087654321 </p>
+                    </div>
+                </div>
 
-    </form>
+                <form className='contact__form' onSubmit={handleSubmit}>
+                    <div className="contact__form-group grid">
+                        <div className="contact__form-div">
+                            <label  className="contact__form-tag text-cs"> Your Name <b>*</b></label>
+                                <input type="text" name='name' value={form.name} onClick={handleChange} className="contact__form-input" />
+                        </div>
+                        
+                        <div className="contact__form-div">
+                            <label  className="contact__form-tag text-cs"> Your Email <b>*</b></label>
+                                <input type="email" name='email' value={form.email} onClick={handleChange}className="contact__form-input" />
+                        </div>
+                    </div>
 
-  </div>
-</section>  )
+                    <div className="contact__form-div">
+                            <label  className="contact__form-tag text-cs"> Your Subject <b>*</b></label>
+                            <input type="text" name='subject' value={form.subject} onClick={handleChange} 
+                            className="contact__form-input" />
+                    </div>
+
+                    <div className="contact__form-div contact__form-area">
+                            <label  className="contact__form-tag text-cs"> Your Message <b>*</b></label>
+                            <textarea className='contact__form-input' name='message' value={form.message} onClick={handleChange} />
+                    </div>
+
+                    <div className="conatct__submit">
+                        <p>*Terms and conditions apply.</p>
+
+                        <button type='submit' className='btn text-cs'> Send Message </button>
+                    </div>
+                </form>
+        </div>  
+    </section>
+  )
 }
 
 export default Contact

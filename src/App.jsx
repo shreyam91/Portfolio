@@ -1,27 +1,27 @@
 import './App.css'
-
-import Sidebar from './components/sidebar/Sidebar';
-import Home from './components/home/Home';
-import About from './components/about/About';
-import Work from './components/work/Work';
-import Resume from './components/resume/Resume';
+import Blog from './components/blog/Blog';
 import Contact from './components/contact/Contact';
-import Blog  from './components/blog/Blog';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import Home from './components/home/Home';
+import Projects from './components/projects/Projects';
+import Resume from './components/resume/Resume';
+import Services from './components/services/Services';
 import Skills from './components/skills/Skills';
-
 function App() {
 
   return (
     <>
-    <Sidebar />
-    <main className='main'>
+    <main className="main">
+      <Header/>
       <Home/>
-      <About/>
-      <Work/>
+      <Services/>
+      <Skills/>
+      <Projects/>
       <Resume/>
       <Blog/>
       <Contact/>
-      <Skills/>
+      <Footer />
     </main>
     </>
   )

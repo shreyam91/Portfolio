@@ -1,59 +1,44 @@
-import './blog.css'
+import './blog.css';
+import { IoArrowRedoSharp } from "react-icons/io5";
 
-import Image1 from '../../assets/blog-1.svg';
-import Image2 from '../../assets/blog-2.svg';
-import Image3 from '../../assets/blog-3.svg';
+import BlogOne from '../../assets/blog1.jpg';
+import BlogTwo from '../../assets/blog2.jpg';
+import BlogThree from '../../assets/blog3.jpg';
+
 const Blog = () => {
   return (
-    <section className="blog container section" id="blog">
-      <h2 className="section__title">Latest Posts</h2>
-      <div className="blog__container grid">
-        <div className="blog__card">
+    <section className="blog section" id="blog">
+        <h2 className="section__title text-cs"> Latest Blog </h2>
+        <p className="section__subtitle">
+            My <span> Articles </span>
+        </p>
 
-          <div className="blog__thumb">
-            <a href=""> <span className="blog__category"> Review </span></a>
-            <a href=""> <img src={Image1} alt="" className='blog__img'/></a>
-          </div>
-
-          <div className="blog__details">
-            <h3 className="blog__title">this is my first blogs</h3>
-            <div className="blog__meta">
-              <span>9 may 2024</span>
-              <span className="blog__dot">.</span>
-              <span>Hello</span>
+        <div className="blog__container container grid">
+            <div className="blog__item card card-two">
+                <span className='blog__data text-cs'> MAY 21, 2024</span>
+                <h3 className="blog__title"> The Main Thing for the designer</h3>
+                <p className="blog__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam molestiae unde labore sapiente debitis ad</p>
+                <a href="" className='link'>Read More <IoArrowRedoSharp className='link__icon'/> </a>
+                <img src={BlogOne} alt="" className='blog__img'/>
             </div>
-          </div>
-          
-          <div className="blog__thumb">
-            <a href=""> <span className="blog__category">Review </span></a>
-            <a href=""> <img src={Image2} alt="" className='blog__img'/></a>
-          </div>
-
-          <div className="blog__details">
-            <h3 className="blog__title">this is my first blogs </h3>
-            <div className="blog__meta">
-              <span>14 may 2024</span>
-              <span className="blog__dot">.</span>
-              <span>Hello</span>
+            
+            <div className="blog__item card card-two">
+                <span className='blog__data text-cs'> MAY 21, 2024</span>
+                <h3 className="blog__title"> The Main Thing for the designer</h3>
+                <p className="blog__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam molestiae unde labore sapiente debitis ad</p>
+                <a href="" className='link'>Read More <IoArrowRedoSharp className='link__icon'/> </a>
+                <img src={BlogTwo} alt="" className='blog__img'/>
             </div>
-          </div>
-          
-          <div className="blog__thumb">
-            <a href=""> <span className="blog__category">Review </span></a>
-            <a href=""> <img src={Image3} alt="" className='blog__img'/></a>
-          </div>
-
-          <div className="blog__details">
-            <h3 className="blog__title">this is my first blogs</h3>
-            <div className="blog__meta">
-              <span>23 may 2024</span>
-              <span className="blog__dot">.</span>
-              <span>Hello</span>
+            
+            <div className="blog__item card card-two">
+                <span className='blog__data text-cs'> MAY 21, 2024</span>
+                <h3 className="blog__title"> The Main Thing for the designer</h3>
+                <p className="blog__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam molestiae unde labore sapiente debitis ad</p>
+                <a href="" className='link'>Read More <IoArrowRedoSharp className='link__icon'/> </a>
+                <img src={BlogThree} alt="" className='blog__img'/>
             </div>
-          </div>
-
+            
         </div>
-      </div>
     </section>
   )
 }
