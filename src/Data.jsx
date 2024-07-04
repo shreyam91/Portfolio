@@ -38,13 +38,6 @@ export const services = [
       'Web designers craft the overall vision & plan for a website layout. Professional logo development: Business, Company, or Personal.',
   },
   {
-    id: 2,
-    name: ' Apps Development ',
-    title: ' iOS & Android ',
-    description:
-      'Design Software applications to run on mobile devices. Modern and mobile-ready application that will help you reach all of your marketing.',
-  },
-  {
     id: 3,
     name: ' Photography ',
     title: ' Photography ',

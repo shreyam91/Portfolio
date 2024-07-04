@@ -42,14 +42,6 @@ const Contact = () => {
                         <p className="contact__card-data"> Kanpur, Uttar Pradesh</p>
                     </div>
                     
-                    {/* <div className="contact__card">
-                        <span className="contact__card-icon">
-                            <FaRegMap/>
-                        </span>
-
-                        <h3 className="contact__card-title"></h3>
-                        <p className="contact__card-data"></p>
-                    </div> */}
                     
                     <div className="contact__card">
                         <span className="contact__card-icon">

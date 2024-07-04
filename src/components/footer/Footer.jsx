@@ -1,5 +1,4 @@
 import './footer.css';
-import { SiLeetcode,SiInstagram,SiFacebook  } from "react-icons/si";
 import { FaGithub,FaLinkedinIn,FaDev } from "react-icons/fa";
 
 const Footer = () => {

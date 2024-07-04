@@ -21,8 +21,6 @@ const Services = () => {
         </p>
 
         <Swiper  
-        // slidesPerView={1}
-        // spaceBetween={10}
         pagination={{
           clickable: true,
         }}
