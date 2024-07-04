@@ -1,4 +1,4 @@
-live Preview: https://shreyam91.github.io/Portfolio-react/
+live Preview: https://shreyam91.github.io/Portfolio/
 
 
 
