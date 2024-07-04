@@ -8,7 +8,7 @@ const Contact = () => {
 
     const [form, setForm] = useState({name:'', email:'', subject:'', message:''})
 
-    const handleChange =(e) =>{
+    const handleChange =(e) => {
         const name = e.target.name;
         const value = e.target.value;
         setForm({...form,[name]: value});
@@ -17,7 +17,7 @@ const Contact = () => {
     const handleSubmit =(e) =>{
         e.preventDefault();
 
-        axios.post('https://sheet.best/api/sheets/57168231-3649-4346-b3c6-e7b5d56c9a90', form).then((response) =>{
+        axios.post('https://sheet.best/api/sheets/70152cd4-664e-495e-91ba-4f4438e4797b', form).then((response) =>{
             console.log(response);
             // clearing the form fields
             setForm({name:'', email:'', subject:'', message:''});
@@ -75,7 +75,7 @@ const Contact = () => {
                         </span>
 
                         <h3 className="contact__card-title">Phone</h3>
-                        <p className="contact__card-data"> +91 - 9087654321 </p>
+                        <p className="contact__card-data"> +91 - 6392764845 </p>
                     </div>
                 </div>
 
@@ -83,24 +83,24 @@ const Contact = () => {
                     <div className="contact__form-group grid">
                         <div className="contact__form-div">
                             <label  className="contact__form-tag text-cs"> Your Name <b>*</b></label>
-                                <input type="text" name='name' value={form.name} onClick={handleChange} className="contact__form-input" />
+                                <input type="text" name='name' value={form.name} onChange={handleChange} className="contact__form-input" />
                         </div>
                         
                         <div className="contact__form-div">
                             <label  className="contact__form-tag text-cs"> Your Email <b>*</b></label>
-                                <input type="email" name='email' value={form.email} onClick={handleChange}className="contact__form-input" />
+                                <input type="email" name='email' value={form.email} onChange={handleChange}className="contact__form-input" />
                         </div>
                     </div>
 
                     <div className="contact__form-div">
                             <label  className="contact__form-tag text-cs"> Your Subject <b>*</b></label>
-                            <input type="text" name='subject' value={form.subject} onClick={handleChange} 
+                            <input type="text" name='subject' value={form.subject} onChange={handleChange} 
                             className="contact__form-input" />
                     </div>
 
                     <div className="contact__form-div contact__form-area">
                             <label  className="contact__form-tag text-cs"> Your Message <b>*</b></label>
-                            <textarea className='contact__form-input' name='message' value={form.message} onClick={handleChange} />
+                            <textarea className='contact__form-input' name='message' value={form.message} onChange={handleChange} />
                     </div>
 
                     <div className="conatct__submit">
